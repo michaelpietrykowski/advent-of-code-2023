@@ -1,0 +1,6 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/macos,jetbrains,node
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,jetbrains,node
+
+node_modules
+.idea
