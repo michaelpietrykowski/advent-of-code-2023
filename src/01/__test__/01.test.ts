@@ -26,7 +26,7 @@ describe("Day 1", () => {
     });
 
     test("should return correct result for input with overlapping spellings of numbers", () => {
-      expect(part2.getResult(["eightone"])).toBe(81);
+      expect(part2.getResult(["eightwo"])).toBe(82);
     });
 
     test("should return correct result for example input", () => {
