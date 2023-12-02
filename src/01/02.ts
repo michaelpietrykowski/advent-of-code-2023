@@ -1,4 +1,3 @@
-import { loadInputFromFile } from "../util";
 import {
   getFirstAndLastCharacter,
   parseNumber,
@@ -39,12 +38,10 @@ const translateSpelledOutNumbers = (line: string) => {
   return result.join("");
 };
 
-const result = loadInputFromFile()
-  .map(translateSpelledOutNumbers)
-  .map(removeNonDigitCharacters)
-  .map(getFirstAndLastCharacter)
-  .map(parseNumber)
-  .reduce((sum, curr) => sum + curr, 0);
-
-console.log("Result for day 1 part 2: ");
-console.log(result);
+export const getResult = (input: string[]) =>
+  input
+    .map(translateSpelledOutNumbers)
+    .map(removeNonDigitCharacters)
+    .map(getFirstAndLastCharacter)
+    .map(parseNumber)
+    .reduce((sum, curr) => sum + curr, 0);

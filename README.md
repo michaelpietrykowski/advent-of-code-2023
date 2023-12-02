@@ -2,7 +2,9 @@
 
 Solutions written in Typescript/node.
 
-Can be run using ts-node: `ts-node <filename> <inputfile>`
+Each part of each day has at least one corresponding test that runs the code with the input file I was given.
+
+The tests can be run using `yarn test`.
 
 ## Solutions
 

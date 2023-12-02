@@ -1,14 +1,7 @@
 import * as fs from "fs";
 
-export const loadInputFromFile = (): string[] => {
-  const args = process.argv.slice(2);
-
-  if (!args.length) {
-    console.log("Usage: ts-node <file> <inputfile>");
-    process.exit(1);
-  }
-
-  const buffer = fs.readFileSync(args[0]);
+export const loadInputFromFile = (filename: string): string[] => {
+  const buffer = fs.readFileSync(filename);
   return buffer
     .toString()
     .split("\n")
