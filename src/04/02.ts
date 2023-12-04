@@ -1,7 +1,7 @@
-import { parseCards } from "./parse";
+import { Card } from "./Card";
 
 export const getResult = (input: string[]) => {
-  const originalCards = parseCards(input);
+  const originalCards = input.map(Card.parse);
   const cards = [...originalCards];
   let cardCount = 0;
 
@@ -9,10 +9,8 @@ export const getResult = (input: string[]) => {
     const card = cards.pop()!;
     cardCount++;
     const matchingNumbers = card.getWinningNumberCount();
-    if (matchingNumbers !== 0) {
-      for (let i = 1; i <= matchingNumbers; i++) {
-        cards.push(originalCards[card.index - 1 + i]);
-      }
+    for (let i = 1; i <= matchingNumbers; i++) {
+      cards.push(originalCards[card.index - 1 + i]);
     }
   }
   return cardCount;
